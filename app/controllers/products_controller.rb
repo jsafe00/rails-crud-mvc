@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+
+  before_action :set_locale
   
   def index
     @products = Product.all
@@ -44,6 +46,20 @@ class ProductsController < ApplicationController
   end
 
   private
+
+  def set_locale
+    I18n.locale = extract_locale || I18n.default_locale
+  end
+
+  def extract_locale
+  parsed_locale = params[:locale]
+  I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+  end
+
+  def default_url_options
+    { locale: I18n.locale }
+  end
+
   def product_params
     params.require(:product).permit(:name, :description)
   end

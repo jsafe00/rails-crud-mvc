@@ -1,4 +1,12 @@
-<h1>New Product</h1>
+<nav>
+<ul>
+    <li><%= link_to 'English', root_path(locale: :en) %></li>
+    <li><%= link_to 'Spanish', root_path(locale: :es) %></li>
+</ul>
+</nav>
+
+
+<h1><%= t 'new_product' %></h1>
 
 <%= render "form", product: @product %>
 

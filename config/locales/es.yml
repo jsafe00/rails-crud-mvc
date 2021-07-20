@@ -1,0 +1,8 @@
+es:
+  global:
+    forms:
+      submit: Submit
+  messages:
+  new_product: "Nuevo Producto"
+  name: "Título"
+  description: "Descripción"

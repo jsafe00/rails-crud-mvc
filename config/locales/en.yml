@@ -20,4 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  global:
+    forms:
+      submit: Submit
+  messages:
   hello: "Hello world"
+  new_product: 'New Product'
+  name: "Title"
+  description: "Description"
