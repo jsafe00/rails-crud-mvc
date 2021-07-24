@@ -2,11 +2,11 @@
 <ul>
     <li><%= link_to 'English', root_path(locale: :en) %></li>
     <li><%= link_to 'Spanish', root_path(locale: :es) %></li>
+    <li><%= link_to 'Filipino', root_path(locale: :ph) %></li>
 </ul>
 </nav>
 
 
-<h1><%= t 'new_product' %></h1>
+<h1><%= t('messages.new_product') %></h1>
 
 <%= render "form", product: @product %>
-

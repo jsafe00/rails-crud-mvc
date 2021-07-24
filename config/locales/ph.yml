@@ -1,0 +1,8 @@
+ph:
+  messages:
+    new_product: Bagong Produkto
+  global:
+    forms:
+      submit: I-save ang Produkto
+      name: Pamagat
+      description: Paglalarawan

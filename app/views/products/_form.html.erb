@@ -1,22 +1,22 @@
 <%= form_with model: product do |form| %>
   <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= t('global.forms.name') %><br /> 
+    <%= form.text_field :name %> <br /> 
     <% product.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
       <% end %>
   </div>
-
+  <br /> 
   <div>
-    <%= form.label :description %><br>
+    <%= t('global.forms.description') %> <br />
     <%= form.text_area :description, class: 'ckeditor form-control' %>
     <% product.errors.full_messages_for(:description).each do |message| %>
         <div><%= message %></div>
       <% end %>
   </div>
-
+  <br />
   <div>
-    <%= form.submit %>
+    <%= form.submit t('global.forms.submit') %>
   </div>
 <% end %>
 
